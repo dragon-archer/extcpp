@@ -1,0 +1,52 @@
+######################################################
+# @file     .gitignore
+# @brief    Ignore files for Git.
+# @author   dragon-archer <dragon-archer@outlook.com>
+# @license  MIT License
+######################################################
+
+### Begin Microsoft Visual Studio ###
+
+.vs/
+*.vcxproj.user
+*.ipch
+
+### End Microsoft Visual Studio ###
+
+### Begin Build ###
+
+# Directories
+[xX]64/
+[xX]86/
+[rR]elease/
+[dD]ebug/
+/**/[xX]64/
+/**/[xX]86/
+/**/[rR]elease/
+/**/[dD]ebug/
+
+# Targets
+*.dll
+*.lib
+*.exe
+*.def
+
+# Objects
+*.obj
+
+# Logs
+*.log
+*.tlog
+*.lastbuildstate
+unsuccessfulbuild
+
+# Debug Libraries
+*.pdb
+*.idb
+*.iobj
+*.ipdb
+
+# Others
+*.ilk
+
+### End Build ###
