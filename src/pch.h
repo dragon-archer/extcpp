@@ -11,8 +11,4 @@
 #ifndef _LIBEXTCPP_PCH_H
 #define _LIBEXTCPP_PCH_H
 
-// Windows Header
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-
 #endif // _LIBEXTCPP_PCH_H

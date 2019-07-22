@@ -1,6 +1,6 @@
 ﻿/*
 *********************************************************
-* @file       dllmain.cpp
+* @file       main.cpp
 * @brief      The main entry of libextcpp.dll
 * @author     dragon-archer <dragon-archer@outlook.com>
 * @since      v0.1
@@ -9,6 +9,13 @@
 *********************************************************
 */
 #include "pch.h"
+
+// Only compile this file under the Windows OS
+#if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64) || defined(WIN32) || defined(WIN64) || defined(WINRT)
+
+// Windows Header
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
@@ -22,3 +29,5 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 	}
 	return TRUE;
 }
+
+#endif // Windows OS
