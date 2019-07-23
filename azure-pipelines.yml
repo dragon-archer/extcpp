@@ -14,5 +14,4 @@ steps:
 - script: |
     cd build
     make
-    make install
   displayName: 'Build the project by GNU Make'
