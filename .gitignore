@@ -17,6 +17,7 @@
 ### Begin Build ###
 
 # Directories
+build/
 [xX]64/
 [xX]86/
 [rR]elease/
