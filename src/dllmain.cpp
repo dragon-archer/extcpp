@@ -8,12 +8,13 @@
 *             Copyright (C) 2019 dragon-archer
 *********************************************************
 */
-#include "pch.h"
+#include "../include/pch.h"
 
 // Only compile this file under the Windows OS
 #if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64) || defined(WIN32) || defined(WIN64) || defined(WINRT)
 
 // Windows Header
+#include <string.h>
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
