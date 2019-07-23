@@ -1,0 +1,17 @@
+trigger:
+- master
+- develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    mkdir build
+    cd build
+    cmake ..
+  displayName: 'Build Makefile by CMake'
+- script: |
+    make
+    make install
+  displayName: 'Build the project by GNU Make'
