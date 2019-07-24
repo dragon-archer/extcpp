@@ -1,7 +1,7 @@
 ﻿/*
 *********************************************************
 * @file       main.cpp
-* @brief      The main entry of libextcpp.dll
+* @brief      The main entry of the dll
 * @author     dragon-archer <dragon-archer@outlook.com>
 * @since      v0.1
 * @license    The MIT License
