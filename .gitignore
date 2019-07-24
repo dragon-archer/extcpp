@@ -55,3 +55,9 @@ unsuccessfulbuild
 *.ilk
 
 ### End Build ###
+
+### Begin CMake ###
+
+CMakeSettings.json
+
+### End CMake ###
