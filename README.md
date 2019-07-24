@@ -1,4 +1,4 @@
-# libextcpp
+# extcpp
 
 This project is an extension library of
 classes and functions for C++.

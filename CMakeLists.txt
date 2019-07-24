@@ -1,6 +1,14 @@
+######################################################
+# @file     CMakeLists.txt
+# @brief    The project file for CMake
+# @author   dragon-archer <dragon-archer@outlook.com>
+# @license  MIT License
+#           Copyright (C) 2019 dragon-archer
+######################################################
+
 cmake_minimum_required(VERSION 3.0)
 
-PROJECT(libextcpp)
+PROJECT(extcpp VERSION 0.1)
 
 include_directories(./include)
 
@@ -8,4 +16,4 @@ aux_source_directory(./src SRC_DIR)
 
 set(SRC ${SRC_DIR})
 
-add_library(${PROJECT_NAME} ${SRC})
+add_library(lib${PROJECT_NAME} ${SRC})
