@@ -11,16 +11,23 @@ trigger:
 - master
 - develop
 
-pool:
-  vmImage: 'ubuntu-latest'
+jobs:
+- job: Build in Windows Server 2019
+    vmImage: 'windows-2019'
+    steps:
+    - script: |
+        mkdir build
+        cd build
+        cmake .. -G "NMake Makefiles"
+        nmake
+      displayName: 'Build Makefile by CMake ; Build the project by NMake'
+- job: Build in Ubuntu 16.04
+    vmImage: 'ubuntu-16.04'
+    steps:
+    - script: |
+        mkdir build
+        cd build
+        cmake .. -G "Unix Makefiles"
+        make
+      displayName: 'Build Makefile by CMake ; Build the project by GNU Make'
 
-steps:
-- script: |
-    mkdir build
-    cd build
-    cmake ..
-  displayName: 'Build Makefile by CMake'
-- script: |
-    cd build
-    make
-  displayName: 'Build the project by GNU Make'
