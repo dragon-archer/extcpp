@@ -17,6 +17,8 @@ os:
 script:
 - mkdir build && cd build
 - cmake .. -G "Unix Makefiles"
+- make && make install
+- make clean
 branches:
   only:
   - master
