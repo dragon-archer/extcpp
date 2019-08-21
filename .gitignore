@@ -9,6 +9,9 @@
 ### Begin Microsoft Visual Studio ###
 
 .vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
 *.vcxproj.user
 *.ipch
 
@@ -52,3 +55,9 @@ unsuccessfulbuild
 *.ilk
 
 ### End Build ###
+
+### Begin CMake ###
+
+CMakeSettings.json
+
+### End CMake ###

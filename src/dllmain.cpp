@@ -8,7 +8,7 @@
 *             Copyright (C) 2019 dragon-archer
 *********************************************************
 */
-#include "../include/pch.h"
+#include <pch.h>
 
 // Only compile this file under the Windows OS
 #if defined(_WINDOWS) || defined(_WIN32) || defined(_WIN64) || defined(WIN32) || defined(WIN64) || defined(WINRT)

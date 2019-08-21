@@ -11,16 +11,39 @@ trigger:
 - master
 - develop
 
-pool:
-  vmImage: 'ubuntu-latest'
-
-steps:
-- script: |
-    mkdir build
-    cd build
-    cmake ..
-  displayName: 'Build Makefile by CMake'
-- script: |
-    cd build
-    make
-  displayName: 'Build the project by GNU Make'
+jobs:
+- job: build_in_windows_2019
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake .. -G "MinGW Makefiles"
+      mingw32-make
+      mingw32-make clean
+      cd ..
+      rm -rf build/
+    displayName: 'Build Makefile by CMake & Build project by GNU Make'
+  - script: |
+      mkdir build
+      cd build
+      cmake .. -G "NMake Makefiles"
+      nmake
+      nmake clean
+      cd ..
+      rm -rf build/
+    displayName: 'Build Makefile by CMake & Build project by NMake'
+- job: build_in_ubuntu_latest
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake .. -G "Unix Makefiles"
+      make
+      make clean
+      cd ..
+      rm -rf build/
+    displayName: 'Build Makefile by CMake & Build project by GNU Make'

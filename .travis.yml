@@ -1,0 +1,30 @@
+#########################################################
+# @file       .travis.yml
+# @brief      The settings for Travis CI
+# @author     dragon-archer <dragon-archer@outlook.com>
+# @since      v0.1
+# @license    The MIT License
+#             Copyright (C) 2019 dragon-archer
+#########################################################
+
+language: cpp
+dist: bionic
+compiler:
+- g++
+os:
+- linux
+before_script:
+- g++ --version
+- cmake --version
+- make --version
+script:
+- mkdir build && cd build
+- cmake .. -G "Unix Makefiles"
+- make
+- make clean
+branches:
+  only:
+  - master
+  - develop
+notifications:
+  email: false
