@@ -9,22 +9,24 @@
 
 language: cpp
 dist: bionic
-compiler:
-- g++
-os:
-- linux
+compiler: gcc
+os: linux
+
 before_script:
 - g++ --version
 - cmake --version
 - make --version
+
 script:
 - mkdir build && cd build
 - cmake .. -G "Unix Makefiles"
 - make
 - make clean
+
 branches:
   only:
   - master
   - develop
+  
 notifications:
   email: false
