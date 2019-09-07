@@ -1,6 +1,6 @@
 # libextcpp
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5b6b6be975ea4b3eb4f27ba65de41b53)](https://www.codacy.com/app/dragon-archer/libextcpp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dragon-archer/libextcpp&amp;utm_campaign=Badge_Grade) ![License](https://img.shields.io/badge/license-MIT-blue) ![Author](https://img.shields.io/badge/author-dragon--archer-blue)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5cad2368ab344cc3b82e3fa2522e9f6b)](https://www.codacy.com/manual/dragon-archer/libextcpp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dragon-archer/libextcpp&amp;utm_campaign=Badge_Grade) ![License](https://img.shields.io/badge/license-MIT-blue) ![Author](https://img.shields.io/badge/author-dragon--archer-blue)
 
 This project is an extension library of
 classes and functions for C++.
