@@ -17,48 +17,6 @@ on:
   - cron: 0 0 0 * * * 
 
 jobs:
-  build_with_mingw:
-    name: Build with MinGW on Windows 
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v1
-    
-    - name: Build the project by CMake
-      run: |
-        mkdir build && cd build
-        cmake .. -G "MinGW Makefiles"
-    
-    - name: Make by MinGW
-      run: |
-        cd build
-        mingw32-make
-    
-    - name: Clean the project
-      run: |
-        cd build
-        mingw32-make clean
-        cd ..
-        rmdir /S /Q build
-  
-  build_with_msbuild:
-    name: Build with MSBuild on Windows 
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v1
-    
-    - name: Build the project by CMake
-      run: |
-        mkdir build && cd build
-        cmake .. -G "Visual Studio 16 2019"
-    
-    - name: Make by MSBuild
-      run: |
-        cd build
-        msbuild libextcpp.sln
-    
-    - name: Clean the project
-      run: rmdir /S /Q build
-  
   build_with_make:
     name: Build with GNU Make on Linux 
     runs-on: ubuntu-latest

@@ -12,28 +12,6 @@ trigger:
 - develop
 
 jobs:
-- job: build_in_windows_2019
-  pool:
-    vmImage: 'windows-2019'
-  steps:
-  - script: |
-      mkdir build
-      cd build
-      cmake .. -G "MinGW Makefiles"
-      mingw32-make
-      mingw32-make clean
-      cd ..
-      rm -rf build/
-    displayName: 'Build Makefile by CMake & Build project by GNU Make'
-  - script: |
-      mkdir build
-      cd build
-      cmake .. -G "NMake Makefiles"
-      nmake
-      nmake clean
-      cd ..
-      rm -rf build/
-    displayName: 'Build Makefile by CMake & Build project by NMake'
 - job: build_in_ubuntu_latest
   pool:
     vmImage: 'ubuntu-latest'
