@@ -1,0 +1,41 @@
+######################################################
+# @file     .github/workflows/main.yml
+# @brief    The settings for GitHub Actions
+# @author   dragon-archer <dragon-archer@outlook.com>
+# @license  MIT License
+#           Copyright (C) 2019 dragon-archer
+######################################################
+
+name: CI
+
+on:
+  push:
+    branches:
+    - master
+    - develop
+  schedule:
+  - cron: 0 0 0 * * * 
+
+jobs:
+  build_with_make:
+    name: Build with GNU Make on Linux 
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Build the project by CMake
+      run: |
+        mkdir build && cd build
+        cmake .. -G "Unix Makefiles"
+    
+    - name: Make by GNU Make
+      run: |
+        cd build
+        make
+    
+    - name: Clean the project
+      run: |
+        cd build
+        make clean
+        cd ..
+        rm -rf build/
