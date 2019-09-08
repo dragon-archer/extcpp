@@ -32,6 +32,7 @@ jobs:
       run: |
         cd build
         make
+        make install
     
     - name: Clean the project
       run: |
