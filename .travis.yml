@@ -24,6 +24,7 @@ script:
 - make
 
 install:
+- cd build
 - sudo make install
 
 branches:
