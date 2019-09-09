@@ -23,6 +23,8 @@ script:
 - cmake .. -G "Unix Makefiles"
 - make
 - sudo make install
+- sudo cpack --config CPackConfig.cmake
+- sudo cpack --config CPackSourceConfig.cmake
 - make clean
 
 branches:
