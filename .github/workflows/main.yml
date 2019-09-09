@@ -38,7 +38,7 @@ jobs:
       run: |
         cd build
         sudo cpack --config CPackConfig.cmake
-        sudo cpack --config CPackSourceConfig.CMake
+        sudo cpack --config CPackSourceConfig.cmake
 
     - name: Clean the project
       run: |
