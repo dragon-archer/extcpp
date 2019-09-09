@@ -23,13 +23,8 @@ script:
 - cmake .. -G "Unix Makefiles"
 - make
 
-before_install:
-- sudo apt update -y cmake cpack
-
 install:
 - sudo make install
-- sudo cpack --config CPackConfig.cmake
-- sudo cpack --config CPackSourceConfig.cmake
 
 branches:
   only:
