@@ -21,7 +21,21 @@ jobs:
       cd build
       cmake .. -G "Unix Makefiles"
       make
+      sudo make install
       make clean
       cd ..
       rm -rf build/
     displayName: 'Build Makefile by CMake & Build project by GNU Make'
+- job: pack_in_ubuntu_latest
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - script: |
+      mkdir build
+      cd build
+      cmake .. -G "Unix Makefiles"
+      sudo cpack --config CPackConfig.cmake
+      sudo cpack --config CPackSourceConfig.cmake
+      cd ..
+      rm -rf build/
+    displayName: 'Build Makefile by CMake & Pack project by CPack'

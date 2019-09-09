@@ -32,7 +32,14 @@ jobs:
       run: |
         cd build
         make
-    
+        sudo make install
+
+    - name: Pack by CPack
+      run: |
+        cd build
+        sudo cpack --config CPackConfig.cmake
+        sudo cpack --config CPackSourceConfig.cmake
+
     - name: Clean the project
       run: |
         cd build
